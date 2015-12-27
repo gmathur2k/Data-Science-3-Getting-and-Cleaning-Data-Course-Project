@@ -1,6 +1,6 @@
 # Data-Science-Specialization
 
-## Course 3-Getting-and-Cleaning-Data-Course-Project README.md
+## Getting-and-Cleaning-Data-Course-Project README.md
 
 ### Project Objective
 The purpose of this project is to demonstrate ability to collect, work with, and clean a data set. 
