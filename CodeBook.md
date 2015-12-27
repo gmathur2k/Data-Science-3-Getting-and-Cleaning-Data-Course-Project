@@ -14,13 +14,6 @@ this article (http://www.insideactivitytracking.com/data-science-activity-tracki
 Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. 
 
 The data linked to the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. 
-A full description is available at the site where the data was obtained: 
-
-http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
-
-Here are the data for the project: 
-
-https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
 ###Study design and data processing
 
@@ -61,10 +54,13 @@ Some information on the variable including:
 If available, some additional notes on the variable not covered elsewehere. If no notes are present leave this section out.
 
 ###Sources
-Sources you used if any, otherise leave out.
+A full description is available at the site where the data was obtained: 
 
-Pool, D.  2015.  Ref
-Wickham, H.  Tidy Data.  Journal of Statistical Software.  Volume VV, Issue II.
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+
+Here are the data for the project: 
+
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
 ###Annex
 If you used any code in the codebook that had the echo=FALSE attribute post this here (make sure you set the results parameter to 'hide' as you do not want the results to show again)
