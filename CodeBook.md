@@ -136,4 +136,7 @@ This dataset is distributed AS-IS and no responsibility implied or explicit can 
 - Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita and Xavier Parra. November 2013.
 
 #####Annex
-If you used any code in the codebook that had the echo=FALSE attribute post this here (make sure you set the results parameter to 'hide' as you do not want the results to show again)
+1. README.txt: Description of the data set (what is it about).
+2. features_info.txt: Description of the features for which data is capttured in the data set (what does it contains).
+3. features.txt: List of individual features for which values are contained in the actual data.
+4. activity_labels: labels for human activity such as STANDING, LYING etc.
