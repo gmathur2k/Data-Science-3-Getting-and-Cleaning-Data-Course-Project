@@ -64,8 +64,7 @@ For each record in the dataset it is provided:
 - Its activity label. 
 - An identifier of the subject who carried out the experiment.
 
-Notes: 
-======
+####Notes: 
 - Features are normalized and bounded within [-1,1].
 - Each feature vector is a row on the text file.
 - The units used for the accelerations (total and body) are 'g's (gravity of earth -> 9.80665 m/seg2).
@@ -77,20 +76,19 @@ For more information about this dataset please contact: activityrecognition '@' 
 ###Study design and data processing
 
 ####Collection of the raw data
-Description of how the data was collected.
 
-####Notes on the original (raw) data 
+#####Notes on the original (raw) data 
 Some additional notes (if avaialble, otherwise you can leave this section out).
 
-###Creating the tidy datafile
+####Creating the tidy datafile
 
-####Guide to create the tidy data file
+#####Guide to create the tidy data file
 Description on how to create the tidy data file (1. download the data, ...)/
 
 ####Cleaning of the data
 Short, high-level description of what the cleaning script does. [link to the readme document that describes the code in greater detail]()
 
-###Description of the variables in the tiny_data.txt file
+####Description of the variables in the tiny_data.txt file
 General description of the file including:
  - Dimensions of the dataset
  - Summary of the data
@@ -135,8 +133,7 @@ This dataset is distributed AS-IS and no responsibility implied or explicit can 
 
 [4] Jorge Luis Reyes-Ortiz, Alessandro Ghio, Xavier Parra-Llanas, Davide Anguita, Joan Cabestany, Andreu Catal�. Human Activity and Motion Disorder Recognition: Towards Smarter Interactive Cognitive Environments. 21th European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning, ESANN 2013. Bruges, Belgium 24-26 April 2013.  
 
-==================================================================================================
-Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita and Xavier Parra. November 2013.
+- Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita and Xavier Parra. November 2013.
 
-###Annex
+#####Annex
 If you used any code in the codebook that had the echo=FALSE attribute post this here (make sure you set the results parameter to 'hide' as you do not want the results to show again)
