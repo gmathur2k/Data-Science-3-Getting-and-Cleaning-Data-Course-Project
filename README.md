@@ -5,7 +5,7 @@
 ### Project Objective
 The purpose of this project is to demonstrate ability to collect, work with, and clean a data set. 
 
-The goal is to prepare tidy data that can be used for later analysis. This project has following deliverables:
+The goal is to prepare tidy data that can be used for later analysis. This project has following <b>deliverables</b>:
 
 1 README.md (this file) - briefly describes about the contents of the github project repository and how the scripts work together.
 
@@ -33,5 +33,4 @@ and
 
 2.5 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-
-
+3 Execute run_analysis.R to prepare tidy data set and attach it to the project contents.
