@@ -83,24 +83,27 @@ dtTest <- cbind(x_test,y_test,sbj_test)
 dtRawAll <- rbind(dtTraining,dtTest)
 nrow(dtRawAll) ; ncol(dtRawAll)
 
-# Extracts only the measurements on the mean and standard deviation for each measurement. 
-activity_labels <- read.table("./activity_labels.txt") %>% rename(Index=V1,Label=V2)
-features <- read.table("./features.txt")  %>% rename(Index=V1,Label=V2)
+# Step 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
+activity_labels <- read.table("./activity_labels.txt") %>% rename(ID=V1,Label=V2)
+features <- read.table("./features.txt")  %>% rename(ID=V1,Label=V2)
 # head(activity_labels); head(features)
 
-extract_features <- grepl("mean|std", features)
-names(dtRawAll) = features
-dtRawAll = dtRawAll[,extract_features]
+id <- as.numeric(1:563); act <- c(as.character(features$Label),"ActivityID","SubjectID")
+length(id);length(act); class(id);class(act)
+features <- as.data.frame(cbind(id,act)); names(features) <- c("ID","Label")
+names(dtRawAll) <- features$Label
+extract_features <- c(as.character(features[grep("mean|std", features$Label),2]),"ActivityID","SubjectID")
+dtRawAll <- dtRawAll[,extract_features]
+dtRawAll <- merge(dtRawAll,activity_labels,by.X="ActivityID",by.Y="ID",all=TRUE)
 
-# Load activity labels
-y_test[,2] = activity_labels[y_test[,1]]
-names(y_test) = c("Activity_ID", "Activity_Label")
-names(subject_test) = "subject"
+# Step 3. Uses descriptive activity names to name the activities in the data set
+# Step 4. Appropriately labels the data set with descriptive variable names. 
+dtRawAll <- select(dtRawAll,1:81,83)
+names(dtRawAll)[82]<-"ActivityName"
 
-id_labels   = c("subject", "Activity_ID", "Activity_Label")
-data_labels = setdiff(colnames(data), id_labels)
-melt_data      = melt(data, id = id_labels, measure.vars = data_labels)
-
-# Uses descriptive activity names to name the activities in the data set
-# Appropriately labels the data set with descriptive variable names. 
 # From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+id_labels   = c("SubjectID", "ActivityID", "ActivityName")
+data_labels = setdiff(colnames(dtRawAll), id_labels)
+melt_data      = melt(dtRawAll, id = id_labels, measure.vars = data_labels)
+dtMeans <- dcast(melt_data, SubjectID+ActivityID+ActivityName ~ mean)
